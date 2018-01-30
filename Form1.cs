@@ -72,7 +72,7 @@ namespace AutoKeyboard
             SetForegroundWindow(calculatorHandle);
             SendKeys.SendWait("111");
             SendKeys.SendWait("*");
-            SendKeys.SendWait("11");
+            SendKeys.SendWait("12");
             SendKeys.SendWait("=");
         }
     }
