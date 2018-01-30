@@ -56,10 +56,11 @@ namespace AutoKeyboard
         {
             // Get a handle to the Calculator application. The window class
             // and window name were obtained using the Spy++ tool.
-            IntPtr calculatorHandle = FindWindow("CalcFrame", "Calculator");  
+            //IntPtr calculatorHandle = FindWindow("CalcFrame", "Calculator");  
             //   IntPtr calculatorHandle = FindWindow("calc", "Calculator");
             //IntPtr calculatorHandle = FindWindow("CalcFrame", "calc.exe");
             // Verify that Calculator is a running process.
+            IntPtr calculatorHandle = FindWindow(null, "小算盤");
             if (calculatorHandle == IntPtr.Zero)
             {
                 MessageBox.Show("Calculator is not running.");
