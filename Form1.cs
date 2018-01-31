@@ -75,5 +75,17 @@ namespace AutoKeyboard
             SendKeys.SendWait("13");
             SendKeys.SendWait("=");
         }
+
+        /// <summary>
+        /// 模擬壓住滑鼠右鍵。
+        /// </summary>
+        public static void RightDown()
+        {
+            NativeMethods.mouse_event(NativeContansts.MEF_RIGHTDOWN, 0, 0, 0, IntPtr.Zero);
+        }
+
+
+        public extern static void mouse_event(int dwFlags, int dx, int dy, int dwData, IntPtr dwExtraInfo);
+
     }
 }
